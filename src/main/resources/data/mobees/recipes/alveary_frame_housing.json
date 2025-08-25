@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "alveary",
+  "key": {
+    "#": {
+      "item": "forestry:electron_tube_diamond"
+    },
+    "C": {
+      "item": "forestry:frame_impregnated"
+    },
+    "W": {
+      "item": "forestry:scented_paneling"
+    },
+    "X": {
+      "item": "forestry:alveary_plain"
+    }
+  },
+  "pattern": [
+    "#X#",
+    "WCW",
+    "#X#"
+  ],
+  "result": {
+    "item": "mobees:alveary_frame_housing"
+  },
+  "show_notification": true
+}

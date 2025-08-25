@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mobees:soul_wax"
+    },
+    "A": {
+      "item": "forestry:frame_untreated"
+    },
+    "X": {
+      "item": "forestry:honey_drop"
+    }
+  },
+  "pattern": [
+    "#X#",
+    "XAX",
+    "#X#"
+  ],
+  "result": {
+    "item": "mobees:frame_kind"
+  },
+  "show_notification": true
+}

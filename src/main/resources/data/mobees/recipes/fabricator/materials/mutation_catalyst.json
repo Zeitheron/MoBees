@@ -1,0 +1,29 @@
+{
+  "type": "forestry:fabricator",
+  "molten": {
+    "Amount": 500,
+    "FluidName": "forestry:glass"
+  },
+  "plan": [],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "P": {
+        "item": "forestry:pulsating_mesh"
+      }
+    },
+    "pattern": [
+      "PPP",
+      "PAP",
+      "PPP"
+    ],
+    "result": {
+      "item": "mobees:mutation_catalyst"
+    },
+    "show_notification": true
+  }
+}

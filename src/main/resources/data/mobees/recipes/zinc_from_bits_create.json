@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "item": "mobees:zinc_bit"
+    }
+  ],
+  "result": {
+    "item": "create:zinc_ingot"
+  }
+}

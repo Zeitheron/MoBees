@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "combs",
+  "key": {
+    "#": {
+      "item": "mobees:bee_comb_arcane"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "item": "mobees:block_bee_comb_arcane"
+  },
+  "show_notification": true
+}

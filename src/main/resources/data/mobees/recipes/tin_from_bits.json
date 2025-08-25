@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:tin_bit"
+    },
+    {
+      "item": "mobees:tin_bit"
+    },
+    {
+      "item": "mobees:tin_bit"
+    },
+    {
+      "item": "mobees:tin_bit"
+    },
+    {
+      "item": "mobees:tin_bit"
+    },
+    {
+      "item": "mobees:tin_bit"
+    },
+    {
+      "item": "mobees:tin_bit"
+    },
+    {
+      "item": "mobees:tin_bit"
+    }
+  ],
+  "result": {
+    "item": "forestry:ingot_tin"
+  }
+}

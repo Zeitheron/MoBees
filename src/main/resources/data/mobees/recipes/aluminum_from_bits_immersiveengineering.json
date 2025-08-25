@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:aluminum_bit"
+    },
+    {
+      "item": "mobees:aluminum_bit"
+    },
+    {
+      "item": "mobees:aluminum_bit"
+    },
+    {
+      "item": "mobees:aluminum_bit"
+    },
+    {
+      "item": "mobees:aluminum_bit"
+    },
+    {
+      "item": "mobees:aluminum_bit"
+    },
+    {
+      "item": "mobees:aluminum_bit"
+    },
+    {
+      "item": "mobees:aluminum_bit"
+    }
+  ],
+  "result": {
+    "item": "immersiveengineering:ingot_aluminum"
+  }
+}

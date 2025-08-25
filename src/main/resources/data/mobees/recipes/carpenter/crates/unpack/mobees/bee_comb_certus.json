@@ -1,0 +1,18 @@
+{
+  "type": "forestry:carpenter",
+  "box": [],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+      {
+        "item": "mobees:crated_bee_comb_certus"
+      }
+    ],
+    "result": {
+      "count": 9,
+      "item": "mobees:bee_comb_certus"
+    }
+  },
+  "time": 5
+}

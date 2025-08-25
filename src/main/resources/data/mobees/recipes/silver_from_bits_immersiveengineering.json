@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:silver_bit"
+    },
+    {
+      "item": "mobees:silver_bit"
+    },
+    {
+      "item": "mobees:silver_bit"
+    },
+    {
+      "item": "mobees:silver_bit"
+    },
+    {
+      "item": "mobees:silver_bit"
+    },
+    {
+      "item": "mobees:silver_bit"
+    },
+    {
+      "item": "mobees:silver_bit"
+    },
+    {
+      "item": "mobees:silver_bit"
+    }
+  ],
+  "result": {
+    "item": "immersiveengineering:ingot_silver"
+  }
+}

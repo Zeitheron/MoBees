@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "forestry:beeswax"
+    },
+    "A": {
+      "item": "forestry:frame_untreated"
+    },
+    "X": {
+      "item": "mobees:mutagen"
+    }
+  },
+  "pattern": [
+    "#X#",
+    "XAX",
+    "#X#"
+  ],
+  "result": {
+    "item": "mobees:frame_mutation"
+  },
+  "show_notification": true
+}

@@ -1,11 +1,11 @@
 package com.noodlepfp.mobees.core.data.tag;
 
 import com.noodlepfp.mobees.MoBeesModule;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
+import net.minecraft.tags.*;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.ApiStatus;
 
@@ -21,6 +21,11 @@ public class MoreBeesTags {
         return ItemTags.create(MoBeesModule.mobees(name));
     }
 
+    @ApiStatus.Internal
+    public static TagKey<Biome> biomeTag(String name) {
+        return TagKey.create(Registry.BIOME_REGISTRY, MoBeesModule.mobees(name));
+    }
+
     private static TagKey<Item> forgeItemTag(String name) {
         return ItemTags.create(new ResourceLocation("forge", name));
     }
@@ -34,6 +39,16 @@ public class MoreBeesTags {
         public static final TagKey<Block> ROCKY_BEE_WALL = blockTag("hive_grounds/rocky");
         public static final TagKey<Block> ROCKY_CAVE_REPLACEABLE = blockTag("hive_grounds/rocky_cave_replaceable");
         public static final TagKey<Block> ALPINE_HIVE_GROUNDS = blockTag("hive_grounds/alpine");
+        
+        public static final TagKey<Block> LUSH_BEE_CEILING = blockTag("hive_grounds/lush");
+        public static final TagKey<Block> CAVE_EXTRA_REPLACEABLES = blockTag("hive_grounds/cave_extra_replaceable");
+        public static final TagKey<Block> NETHER_EXTRA_REPLACEABLES = blockTag("hive_grounds/nether_extra_replaceable");
+        
+        public static final TagKey<Block> CAVE_FLOWERS = blockTag("flowers/cave");
+        public static final TagKey<Block> ANCIENT_FLOWERS = blockTag("flowers/ancient");
+        public static final TagKey<Block> SEA_FLOWERS = blockTag("flowers/sea");
+        public static final TagKey<Block> CORAL_FLOWERS = blockTag("flowers/coral");
+        public static final TagKey<Block> SCULK_FLOWERS = blockTag("flowers/sculk");
 
         // Flowers
         public static final TagKey<Block> ROCK_FLOWERS_STONE = blockTag("flowers/rock");
@@ -75,5 +90,10 @@ public class MoreBeesTags {
         public static final TagKey<Item> FROGLIGHT = itemTag("froglight");
 
         public static final TagKey<Item> BEE_FRAME = itemTag("bee_frame");
+    }
+
+    public static class Biomes {
+        public static final TagKey<Biome> DEEP_DARK = biomeTag("deep_dark");
+        public static final TagKey<Biome> WARPED_FOREST = biomeTag("warped_fores");
     }
 }

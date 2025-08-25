@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:wither_skull_bit"
+    },
+    {
+      "item": "mobees:wither_skull_bit"
+    },
+    {
+      "item": "mobees:wither_skull_bit"
+    },
+    {
+      "item": "mobees:wither_skull_bit"
+    },
+    {
+      "item": "mobees:wither_skull_bit"
+    },
+    {
+      "item": "mobees:wither_skull_bit"
+    },
+    {
+      "item": "mobees:wither_skull_bit"
+    },
+    {
+      "item": "mobees:wither_skull_bit"
+    }
+  ],
+  "result": {
+    "item": "mobees:wither_skull_partial"
+  }
+}

@@ -7,7 +7,10 @@ import forestry.modules.features.*;
 @FeatureProvider
 public class MoreBeesApicultureItems {
     public static final IFeatureRegistry REGISTRY = ModFeatureRegistry.get(MoBeesModule.mobees("core"));
+    
     public static final FeatureItemGroup<MoreBeesItemHoneyComb, MoreBeesEnumHoneyComb> BEE_COMBS = REGISTRY.itemGroup(MoreBeesItemHoneyComb::new, "bee_comb", MoreBeesEnumHoneyComb.VALUES);
+    public static final FeatureItemGroup<MoreBeesItemPropolis, MoreBeesEnumPropolis> PROPOLIS = REGISTRY.itemGroup(MoreBeesItemPropolis::new, "propolis", MoreBeesEnumPropolis.VALUES);
+    
     public static final FeatureItem<MoreBeesItemHiveFrame> FRAME_PRESERVATION = REGISTRY.item(() -> new MoreBeesItemHiveFrame
             .MoreBeesItemHiveFrameBuilder(256)
             .setAgeMult(0.5f)

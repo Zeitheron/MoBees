@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:cobalt_bit"
+    },
+    {
+      "item": "mobees:cobalt_bit"
+    },
+    {
+      "item": "mobees:cobalt_bit"
+    },
+    {
+      "item": "mobees:cobalt_bit"
+    },
+    {
+      "item": "mobees:cobalt_bit"
+    },
+    {
+      "item": "mobees:cobalt_bit"
+    },
+    {
+      "item": "mobees:cobalt_bit"
+    },
+    {
+      "item": "mobees:cobalt_bit"
+    }
+  ],
+  "result": {
+    "item": "tconstruct:cobalt_ingot"
+  }
+}

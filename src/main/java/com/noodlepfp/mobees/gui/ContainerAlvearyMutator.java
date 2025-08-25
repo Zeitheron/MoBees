@@ -19,7 +19,7 @@ public class ContainerAlvearyMutator extends ContainerTile<TileAlvearyMutator> {
     private int energyStored = -1;
 
     public static ContainerAlvearyMutator fromNetwork(int windowId, Inventory inv, FriendlyByteBuf data) {
-        TileAlvearyMutator tile = TileUtil.getTile(inv.player.level(), data.readBlockPos(), TileAlvearyMutator.class);
+        TileAlvearyMutator tile = TileUtil.getTile(inv.player.getLevel(), data.readBlockPos(), TileAlvearyMutator.class);
         return new ContainerAlvearyMutator(windowId, inv, tile);
     }
 

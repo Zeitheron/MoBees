@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:yellorium_bit"
+    },
+    {
+      "item": "mobees:yellorium_bit"
+    },
+    {
+      "item": "mobees:yellorium_bit"
+    },
+    {
+      "item": "mobees:yellorium_bit"
+    },
+    {
+      "item": "mobees:yellorium_bit"
+    },
+    {
+      "item": "mobees:yellorium_bit"
+    },
+    {
+      "item": "mobees:yellorium_bit"
+    },
+    {
+      "item": "mobees:yellorium_bit"
+    }
+  ],
+  "result": {
+    "item": "bigreactors:yellorium_ingot"
+  }
+}

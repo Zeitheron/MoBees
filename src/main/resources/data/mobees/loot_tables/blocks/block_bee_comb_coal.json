@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "mobees:block_bee_comb_coal"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "mobees:blocks/block_bee_comb_coal"
+}

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "mobees:frame_crimson",
+    "mobees:frame_destruction",
+    "mobees:frame_fertile",
+    "mobees:frame_kind",
+    "mobees:frame_mutation",
+    "mobees:frame_preservation",
+    "forestry:frame_untreated",
+    "forestry:frame_proven",
+    "forestry:frame_impregnated",
+    "forestry:frame_creative"
+  ]
+}

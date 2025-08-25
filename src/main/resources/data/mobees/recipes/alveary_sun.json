@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "alveary",
+  "key": {
+    "#": {
+      "item": "forestry:electron_tube_gold"
+    },
+    "F": {
+      "tag": "mobees:froglight"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "X": {
+      "item": "forestry:alveary_plain"
+    }
+  },
+  "pattern": [
+    "#X#",
+    "GFG",
+    "#X#"
+  ],
+  "result": {
+    "item": "mobees:alveary_sun"
+  },
+  "show_notification": true
+}

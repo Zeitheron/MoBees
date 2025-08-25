@@ -87,6 +87,5 @@ public abstract class ThrottledBeeEffect extends DummyBeeEffect implements IBeeE
         return false;
     }
 
-    abstract IEffectData doEffectThrottled(IGenome genome, IEffectData storedData, IBeeHousing housing);
-
+    public abstract IEffectData doEffectThrottled(IGenome genome, IEffectData storedData, IBeeHousing housing);
 }

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:certus_bit"
+    },
+    {
+      "item": "mobees:certus_bit"
+    },
+    {
+      "item": "mobees:certus_bit"
+    },
+    {
+      "item": "mobees:certus_bit"
+    },
+    {
+      "item": "mobees:certus_bit"
+    },
+    {
+      "item": "mobees:certus_bit"
+    },
+    {
+      "item": "mobees:certus_bit"
+    },
+    {
+      "item": "mobees:certus_bit"
+    }
+  ],
+  "result": {
+    "item": "ae2:certus_quartz_crystal"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "forestry:centrifuge",
+  "input": {
+    "item": "mobees:bee_comb_zinc"
+  },
+  "products": [
+    {
+      "chance": 0.8,
+      "item": "forestry:beeswax"
+    },
+    {
+      "chance": 0.5,
+      "item": "forestry:honey_drop"
+    },
+    {
+      "chance": 1.0,
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "chance": 0.3,
+      "count": 2,
+      "item": "mobees:zinc_bit"
+    },
+    {
+      "chance": 0.1,
+      "count": 3,
+      "item": "mobees:zinc_bit"
+    }
+  ],
+  "time": 20
+}

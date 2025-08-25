@@ -1,23 +1,17 @@
 package com.noodlepfp.mobees.core.client;
 
 import com.noodlepfp.mobees.MoBeesModule;
-import com.noodlepfp.mobees.bee.MoreBeesDefinition;
-import com.noodlepfp.mobees.bee.MoreBeesSpecies;
-import com.noodlepfp.mobees.bee.MoreBeesTaxonomy;
-import com.noodlepfp.mobees.core.data.MoreBeesEffect;
-import com.noodlepfp.mobees.core.data.MoreBeesFlowerType;
+import com.noodlepfp.mobees.bee.*;
+import com.noodlepfp.mobees.core.data.*;
 import com.noodlepfp.mobees.core.data.tag.MoreBeesTags;
 import com.noodlepfp.mobees.feature.MoreBeesApicultureItems;
-import com.noodlepfp.mobees.genetics.effect.CursedEffect;
-import com.noodlepfp.mobees.genetics.effect.LibrarianEffect;
-import com.noodlepfp.mobees.genetics.effect.MelodicChimeEffect;
-import com.noodlepfp.mobees.genetics.effect.WitchingEffect;
+import com.noodlepfp.mobees.ff.*;
+import com.noodlepfp.mobees.genetics.effect.*;
 import com.noodlepfp.mobees.hive.MoreHiveDefinition;
 import com.noodlepfp.mobees.item.MoreBeesEnumHoneyComb;
+import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.client.plugin.IClientRegistration;
-import forestry.api.plugin.IApicultureRegistration;
-import forestry.api.plugin.IForestryPlugin;
-import forestry.api.plugin.IGeneticRegistration;
+import forestry.api.plugin.*;
 import forestry.apiculture.FlowerType;
 import forestry.apiculture.features.ApicultureItems;
 import forestry.apiculture.genetics.effects.PotionBeeEffect;
@@ -27,8 +21,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class MoreBeesPlugin implements IForestryPlugin {
 
@@ -39,15 +32,33 @@ public class MoreBeesPlugin implements IForestryPlugin {
 
     @Override
     public void registerApiculture(@SuppressWarnings("null") IApicultureRegistration apiculture) {
+        FutureForestryFlowerTypes.register(apiculture);
+        FutureForestryBeeEffects.register(apiculture);
         MoreBeesDefinition.defineNewBees(apiculture);
+        
+        Supplier<List<ItemStack>> honeyComb = getForestryComb(EnumHoneyComb.HONEY);
+        Supplier<List<ItemStack>> frozenComb = getForestryComb(EnumHoneyComb.FROZEN);
+        Supplier<List<ItemStack>> spongeComb = getHoneyComb(MoreBeesEnumHoneyComb.SPONGE);
+        Supplier<List<ItemStack>> simmerComb = getForestryComb(EnumHoneyComb.SIMMERING);
+        
+        Supplier<List<ItemStack>> petrifiedComb = getHoneyComb(MoreBeesEnumHoneyComb.ROCKY);
 
         // hive tags
-        Supplier<List<ItemStack>> petrifiedComb = getHoneyComb(MoreBeesEnumHoneyComb.ROCKY);
+        apiculture.registerHive(FutureForestryBeeSpecies.LUSH, MoreHiveDefinition.LUSH)
+                  .addDrop(0.80, FutureForestryBeeSpecies.LUSH, honeyComb, 0.5F)
+                  .addDrop(0.08, ForestryBeeSpecies.VALIANT, honeyComb);
+        
+        apiculture.registerHive(FutureForestryBeeSpecies.AQUATIC, MoreHiveDefinition.AQUATIC)
+                  .addDrop(0.80, FutureForestryBeeSpecies.AQUATIC, spongeComb, 0.4F)
+                  .addDrop(0.03, ForestryBeeSpecies.VALIANT, spongeComb);
+        
+        apiculture.registerHive(FutureForestryBeeSpecies.EMBITTERED, MoreHiveDefinition.NETHER)
+                  .addDrop(0.80, FutureForestryBeeSpecies.EMBITTERED, simmerComb, 0.7F);
+        
         apiculture.registerHive(MoreBeesSpecies.ROCKY, MoreHiveDefinition.ROCKY)
                 .addDrop(0.80, MoreBeesSpecies.ROCKY, petrifiedComb, 0.5F)
                 .addDrop(0.20, MoreBeesSpecies.MARBLE, petrifiedComb);
 
-        Supplier<List<ItemStack>> frozenComb = getForestryComb(EnumHoneyComb.FROZEN);
         apiculture.registerHive(MoreBeesSpecies.ALPINE, MoreHiveDefinition.ALPINE)
                 .addDrop(0.80, MoreBeesSpecies.ALPINE, frozenComb, 0.5F);
 

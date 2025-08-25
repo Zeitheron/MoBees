@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:nickel_bit"
+    },
+    {
+      "item": "mobees:nickel_bit"
+    },
+    {
+      "item": "mobees:nickel_bit"
+    },
+    {
+      "item": "mobees:nickel_bit"
+    },
+    {
+      "item": "mobees:nickel_bit"
+    },
+    {
+      "item": "mobees:nickel_bit"
+    },
+    {
+      "item": "mobees:nickel_bit"
+    },
+    {
+      "item": "mobees:nickel_bit"
+    }
+  ],
+  "result": {
+    "item": "thermal:nickel_ingot"
+  }
+}

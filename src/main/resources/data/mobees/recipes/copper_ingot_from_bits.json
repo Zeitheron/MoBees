@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mobees:copper_bit"
+    },
+    {
+      "item": "mobees:copper_bit"
+    },
+    {
+      "item": "mobees:copper_bit"
+    },
+    {
+      "item": "mobees:copper_bit"
+    },
+    {
+      "item": "mobees:copper_bit"
+    },
+    {
+      "item": "mobees:copper_bit"
+    },
+    {
+      "item": "mobees:copper_bit"
+    },
+    {
+      "item": "mobees:copper_bit"
+    }
+  ],
+  "result": {
+    "item": "minecraft:copper_ingot"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:dusts/glowstone"
+    },
+    {
+      "item": "mobees:arcane_wax"
+    },
+    {
+      "tag": "forge:crops"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "mobees:mutagen"
+  }
+}

@@ -9,9 +9,9 @@ modId="mobees"
 version="${version}"
 displayName="Mo' Bees"
 credits="binnie, thedarkcolour"
-authors="Chris Walker (noodlepfp)"
+authors="Chris Walker (noodlepfp), Zeitheron (Zeith)"
 description='''
-	More Bees for Forestry CE Mod
+	More Bees for Forestry CE Mod, backported to 1.19.2 alongside new content from Forestry CE 1.20.1
 	'''
 
 [[dependencies.mobees]]

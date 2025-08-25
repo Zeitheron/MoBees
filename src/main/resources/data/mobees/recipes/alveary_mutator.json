@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "alveary",
+  "key": {
+    "#": {
+      "item": "forestry:electron_tube_emerald"
+    },
+    "C": {
+      "item": "mobees:mutation_catalyst"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "X": {
+      "item": "forestry:alveary_plain"
+    }
+  },
+  "pattern": [
+    "#X#",
+    "RCR",
+    "#X#"
+  ],
+  "result": {
+    "item": "mobees:alveary_mutator"
+  },
+  "show_notification": true
+}

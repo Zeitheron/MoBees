@@ -1,29 +1,18 @@
 package com.noodlepfp.mobees.core.client;
 
-import com.noodlepfp.mobees.feature.MoreBeesApicultureBlocks;
-import com.noodlepfp.mobees.feature.MoreBeesApicultureItems;
-import com.noodlepfp.mobees.feature.MoreBeesApicultureMenuTypes;
-import com.noodlepfp.mobees.feature.MoreBeesCrateItems;
-import com.noodlepfp.mobees.gui.GuiAlvearyFrameHousing;
-import com.noodlepfp.mobees.gui.GuiAlvearyMutator;
-import forestry.api.ForestryConstants;
-import forestry.api.apiculture.genetics.BeeLifeStage;
-import forestry.api.apiculture.genetics.IBeeSpecies;
-import forestry.api.client.IClientModuleHandler;
-import forestry.api.client.IForestryClientApi;
+import com.noodlepfp.mobees.feature.*;
+import com.noodlepfp.mobees.gui.*;
+import forestry.api.apiculture.genetics.*;
+import forestry.api.client.*;
 import forestry.api.client.apiculture.IBeeClientManager;
 import forestry.apiculture.features.ApicultureItems;
-import forestry.apiimpl.client.ForestryClientApiImpl;
 import forestry.core.models.ClientManager;
 import forestry.core.utils.SpeciesUtil;
-import forestry.modules.ModuleUtil;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.client.event.ModelEvent;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.client.ChunkRenderTypeSet;
+import net.minecraftforge.client.event.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -35,11 +24,8 @@ public class CoreClientHandler implements IClientModuleHandler {
 	public void registerEvents(IEventBus modBus) {
 		modBus.addListener(CoreClientHandler::onClientSetup);
 		modBus.addListener(CoreClientHandler::additionalBakedModels);
-		modBus.addListener(CoreClientHandler::bakeModels);
 		modBus.addListener(CoreClientHandler::registerItemColors);
 		modBus.addListener(CoreClientHandler::registerBlockColors);
-
-		ModuleUtil.getModBus(ForestryConstants.MOD_ID).addListener(EventPriority.HIGHEST, ((ForestryClientApiImpl) IForestryClientApi.INSTANCE)::initializeTextureManager);
 	}
 
 	private static void onClientSetup(FMLClientSetupEvent event) {
@@ -63,10 +49,6 @@ public class CoreClientHandler implements IClientModuleHandler {
 		}
 	}
 
-	private static void bakeModels(ModelEvent.ModifyBakingResult event) {
-		ClientManager.INSTANCE.onBakeModels(event);
-	}
-
 	private static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
 		// Apiculture
 		event.register(ClientManager.FORESTRY_BLOCK_COLOR, MoreBeesApicultureBlocks.BEE_COMB.blockArray());
@@ -84,5 +66,6 @@ public class CoreClientHandler implements IClientModuleHandler {
 		event.register(ClientManager.FORESTRY_ITEM_COLOR, MoreBeesApicultureBlocks.BEE_COMB.blockArray());
 		event.register(ClientManager.FORESTRY_ITEM_COLOR, MoreBeesCrateItems.CRATED_BEE_COMBS.itemArray());
 		event.register(ClientManager.FORESTRY_ITEM_COLOR, MoreBeesApicultureItems.BEE_COMBS.itemArray());
+		event.register(ClientManager.FORESTRY_ITEM_COLOR, MoreBeesApicultureItems.PROPOLIS.itemArray());
 	}
 }

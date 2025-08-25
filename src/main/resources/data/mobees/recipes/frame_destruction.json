@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mobees:soul_wax"
+    },
+    "A": {
+      "item": "forestry:frame_untreated"
+    },
+    "X": {
+      "tag": "forge:obsidian"
+    }
+  },
+  "pattern": [
+    "#X#",
+    "XAX",
+    "#X#"
+  ],
+  "result": {
+    "item": "mobees:frame_destruction"
+  },
+  "show_notification": true
+}

@@ -1,14 +1,12 @@
 package com.noodlepfp.mobees;
 
-import net.minecraft.core.registries.Registries;
+import net.minecraft.core.Registry;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.data.loading.DatagenModLoader;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static com.noodlepfp.mobees.MoBeesModCompat.ModCompatIds.*;
 
@@ -64,7 +62,7 @@ public class MoBeesModCompat {
 
     private static RegistryObject<Item> item(String modid, String name) {
         if (DatagenModLoader.isRunningDataGen()) {
-            DeferredRegister<Item> registry = itemRegistries.computeIfAbsent(modid, key -> DeferredRegister.create(Registries.ITEM, key));
+            DeferredRegister<Item> registry = itemRegistries.computeIfAbsent(modid, key -> DeferredRegister.create(Registry.ITEM_REGISTRY, key));
             return registry.register(name, () -> new Item(new Item.Properties()));
         } else {
             return null;

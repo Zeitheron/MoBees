@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "combs",
+  "key": {
+    "#": {
+      "item": "mobees:bee_comb_cobalt"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "item": "mobees:block_bee_comb_cobalt"
+  },
+  "show_notification": true
+}

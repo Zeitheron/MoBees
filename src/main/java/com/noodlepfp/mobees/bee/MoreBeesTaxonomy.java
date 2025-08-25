@@ -1,5 +1,6 @@
 package com.noodlepfp.mobees.bee;
 
+import com.noodlepfp.mobees.ff.*;
 import com.noodlepfp.mobees.genetics.allele.MoreBeesAlleles;
 import forestry.api.genetics.ForestryTaxa;
 import forestry.api.genetics.alleles.BeeChromosomes;
@@ -9,6 +10,7 @@ import forestry.api.plugin.IGeneticRegistration;
 public class MoreBeesTaxonomy {
 
     public static void defineTaxa(IGeneticRegistration genetics) {
+        FutureForestryBeeTaxonomy.defineTaxa(genetics);
         genetics.defineTaxon(ForestryTaxa.CLASS_INSECTS, ForestryTaxa.ORDER_HYMNOPTERA, order -> {
             order.defineSubTaxon(ForestryTaxa.FAMILY_BEES, family -> {
                 // ROCKY LINE
@@ -16,7 +18,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONG);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_UP_2);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, MoreBeesAlleles.FLOWER_TYPE_ROCK);
                 });
@@ -26,7 +28,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONG);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
                     genus.setDefaultChromosome(BeeChromosomes.TOLERATES_RAIN, ForestryAlleles.TRUE);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, MoreBeesAlleles.FLOWER_TYPE_ROCK);
                 });
@@ -35,7 +37,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
                 });
 
@@ -43,7 +45,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
                 });
 
@@ -52,7 +54,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_NORMAL);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTENED);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_NOCTURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
                     genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
                 });
@@ -63,7 +65,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWER);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
                     genus.setDefaultChromosome(BeeChromosomes.EFFECT, MoreBeesAlleles.EFFECT_MELODIC_CHIME);
@@ -75,7 +77,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWEST);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
                     genus.setDefaultChromosome(BeeChromosomes.EFFECT, MoreBeesAlleles.EFFECT_MELODIC_CHIME);
@@ -87,14 +89,14 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
                     genus.setDefaultChromosome(BeeChromosomes.TOLERATES_RAIN, ForestryAlleles.FALSE);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, MoreBeesAlleles.FLOWER_TYPE_ROCK);
                 });
 
                 family.defineSubTaxon(MoreBeesTaxa.GENUS_CLASSICAL, genus -> {
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
                     genus.setDefaultChromosome(BeeChromosomes.TOLERATES_RAIN, ForestryAlleles.FALSE);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_DIURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_VANILLA);
                     genus.setDefaultChromosome(BeeChromosomes.TERRITORY, ForestryAlleles.TERRITORY_LARGE);
                 });
@@ -105,7 +107,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOW);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
                     genus.setDefaultChromosome(BeeChromosomes.TOLERATES_RAIN, ForestryAlleles.FALSE);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_DIURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, MoreBeesAlleles.FLOWER_TYPE_AMETHYST);
                     genus.setDefaultChromosome(BeeChromosomes.TERRITORY, ForestryAlleles.TERRITORY_LARGER);
                 });
@@ -117,7 +119,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOW);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
                     genus.setDefaultChromosome(BeeChromosomes.TOLERATES_RAIN, ForestryAlleles.FALSE);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_DIURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_VANILLA);
                     genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
@@ -129,7 +131,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_FASTER);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTENED);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_NOCTURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
                     genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
                 });
@@ -140,7 +142,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_NORMAL);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTENED);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_NETHER);
                     genus.setDefaultChromosome(BeeChromosomes.EFFECT, ForestryAlleles.EFFECT_AGGRESSIVE);
                 });
@@ -150,7 +152,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_NORMAL);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.EFFECT, ForestryAlleles.EFFECT_AGGRESSIVE);
                 });
 
@@ -159,7 +161,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWEST);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
                 });
 
@@ -169,7 +171,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_NORMAL);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_4);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_NOCTURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_MUSHROOMS);
                 });
@@ -179,7 +181,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOW);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_NOCTURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_MUSHROOMS);
                 });
@@ -189,7 +191,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWER);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONGEST);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_1);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_NOCTURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                 });
 
                 // BEE LINE
@@ -198,7 +200,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWER);
                     genus.setDefaultChromosome(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTER);
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_NOCTURNAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                     genus.setDefaultChromosome(BeeChromosomes.EFFECT, MoreBeesAlleles.EFFECT_VANISHING);
                 });
 
@@ -273,7 +275,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_4);
                     genus.setDefaultChromosome(BeeChromosomes.EFFECT, MoreBeesAlleles.EFFECT_DARK);
                     genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
-                    genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
+                    genus.setDefaultChromosome(BeeChromosomes.NEVER_SLEEPS, ForestryAlleles.TRUE);
                 });
 
                 // EXTRA AQUATIC LINE
@@ -281,7 +283,7 @@ public class MoreBeesTaxonomy {
                     genus.setDefaultChromosome(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWEST);
                     genus.setDefaultChromosome(BeeChromosomes.TERRITORY, ForestryAlleles.TERRITORY_LARGEST);
                     genus.setDefaultChromosome(BeeChromosomes.TOLERATES_RAIN, ForestryAlleles.TRUE);
-                    genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_SEA);
+                    genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, FutureForestryAlleles.FLOWER_TYPE_SEA);
                     genus.setDefaultChromosome(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_UP_1);
                 });
 
