@@ -74,7 +74,8 @@ public class MoreBeesTilePowerable extends MoreBeesTileActivatable {
         energyStorage.write(compoundNBT);
         compoundNBT.putInt(actionVerb, workingTime);
     }
-
+    
+    @Override
     public void saveNbt(CompoundTag compoundNBT) {
         energyStorage.write(compoundNBT);
         compoundNBT.putInt(actionVerb, workingTime);

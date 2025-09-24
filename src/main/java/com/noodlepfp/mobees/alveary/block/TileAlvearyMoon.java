@@ -1,42 +1,47 @@
 package com.noodlepfp.mobees.alveary.block;
 
-import com.noodlepfp.mobees.alveary.*;
+import com.noodlepfp.mobees.alveary.MoreBeesBlockAlvearyType;
+import com.noodlepfp.mobees.alveary.MoreBeesTilePowerable;
+import com.noodlepfp.mobees.api.IAlvearyErrorModifier;
 import forestry.api.apiculture.IBeeModifier;
 import forestry.api.apiculture.genetics.*;
-import forestry.api.genetics.*;
+import forestry.api.core.*;
+import forestry.api.genetics.IGenome;
+import forestry.api.genetics.IIndividual;
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.api.genetics.capability.IIndividualHandlerItem;
 import forestry.api.multiblock.IAlvearyComponent;
-import forestry.apiculture.BeeSpecies;
 import forestry.apiculture.multiblock.MultiblockLogicAlveary;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 
+import java.util.Set;
+
 import static com.noodlepfp.mobees.alveary.MoreBeesBlockAlveary.LIGHT_LEVEL;
 
-public class TileAlvearySun
+public class TileAlvearyMoon
 		extends MoreBeesTilePowerable
 		implements IAlvearyComponent.BeeModifier<MultiblockLogicAlveary>
 {
 	private final BlockPos pos;
 	
-	private final IBeeModifier MODIFIER = new IBeeModifier()
+	private final IBeeModifier MODIFIER = new IAlvearyErrorModifier()
 	{
 		@Override
-		public boolean isSelfLighted()
+		public void removeErrors(Set<IError> workErrors)
 		{
-			if(isActiveBeeDiurnal())
+			// if active bee is nocturnal, moon lamp will make bee always active
+			if(isActiveBeeNocturnal() && getWorkingTime() > 0)
 			{
-				// if active bee is diurnal, sun lamp will make bee always active
-				return getWorkingTime() > 0;
+				workErrors.remove(ForestryError.NOT_NIGHT);
+				workErrors.remove(ForestryError.NOT_GLOOMY);
 			}
-			return false;
 		}
 	};
 	
-	public TileAlvearySun(BlockPos pos, BlockState state)
+	public TileAlvearyMoon(BlockPos pos, BlockState state)
 	{
-		super(MoreBeesBlockAlvearyType.SUN, pos, state, "Shining", 1, 300);
+		super(MoreBeesBlockAlvearyType.MOON, pos, state, "Glowing", 1, 100);
 		this.pos = pos;
 	}
 	
@@ -48,7 +53,7 @@ public class TileAlvearySun
 		{
 			if(getLightLevel() == 0)
 			{
-				this.level.setBlockAndUpdate(pos, getBlockState().setValue(LIGHT_LEVEL, 12));
+				this.level.setBlockAndUpdate(pos, getBlockState().setValue(LIGHT_LEVEL, 3));
 			}
 		} else
 		{
@@ -64,7 +69,7 @@ public class TileAlvearySun
 		return getBlockState().getValue(LIGHT_LEVEL);
 	}
 	
-	private boolean isActiveBeeDiurnal()
+	private boolean isActiveBeeNocturnal()
 	{
 		IIndividualHandlerItem handler = IIndividualHandlerItem.get(getBeeInventory().getQueen());
 		
@@ -73,16 +78,16 @@ public class TileAlvearySun
 			IIndividual queen = handler.getIndividual();
 			IGenome genome = queen.getGenome();
 			
-			boolean diurnal = false;
+			boolean nocturnal = false;
 			
 			// If the bee never sleeps, we don't need to simulate sun.
 			if(queen instanceof IBee && !genome.getActiveValue(BeeChromosomes.NEVER_SLEEPS))
 			{
 				IBeeSpecies primaryAllele = genome.getActiveValue(BeeChromosomes.SPECIES);
-				diurnal = !primaryAllele.isNocturnal();
+				nocturnal = primaryAllele.isNocturnal();
 			}
 			
-			return diurnal;
+			return nocturnal;
 		}
 		return false;
 	}

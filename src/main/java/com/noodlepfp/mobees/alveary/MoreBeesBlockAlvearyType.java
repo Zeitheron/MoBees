@@ -10,7 +10,7 @@ import java.util.Locale;
 public enum MoreBeesBlockAlvearyType implements IBlockSubtype {
 
     SUN(true),
-//    MOON(true),
+    MOON(true),
     MUTATOR(true),
     RAINSHIELD(true),
     FRAME_HOUSING(false),
@@ -37,7 +37,7 @@ public enum MoreBeesBlockAlvearyType implements IBlockSubtype {
     public FeatureTileType<?> getTileType() {
         return switch (this) {
             case SUN -> MoreBeesApicultureTiles.ALVEARY_SUN;
-//            case MOON -> MoreBeesApicultureTiles.ALVEARY_MOON;
+            case MOON -> MoreBeesApicultureTiles.ALVEARY_MOON;
             case MUTATOR -> MoreBeesApicultureTiles.ALVEARY_MUTATOR;
             case RAINSHIELD -> MoreBeesApicultureTiles.ALVEARY_RAINSHIELD;
             case FRAME_HOUSING -> MoreBeesApicultureTiles.FRAME_HOUSING;
